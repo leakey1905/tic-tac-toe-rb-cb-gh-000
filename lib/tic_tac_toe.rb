@@ -48,6 +48,27 @@ def valid_move?(board, index)
   end
 end
 
+# this method takes in an argument and returns the number of turns played
+def turn_count(board)
+  cnt = 9
+  board.each do |pos|
+    if pos == "" or pos == " " or pos == nil
+      cnt -= 1
+    end
+  end
+  return cnt
+end
+
+# determine if its X's turn or O's turn
+def current_player(board)
+  cnt = turn_count(board)
+  if cnt % 2 == 0
+    return "X"
+  else
+    return "O"
+  end
+end
+
 # encapsulate the logic of a single complete turn
 def turn(board)
   puts "Please enter 1-9:"
@@ -60,30 +81,6 @@ def turn(board)
   end
   display_board(board)
 end
-
-
-def turn_count(board)
-  cnt = 9
-  board.each do |pos|
-    if pos == "" or pos == " " or pos == nil
-      cnt -= 1
-    end
-  end
-  return cnt
-end
-
-def current_player(board)
-  cnt = turn_count(board)
-  if cnt % 2 == 0
-    return "X"
-  else
-    return "O"
-  end
-end
-
-
-
-
 
 
 
