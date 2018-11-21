@@ -30,6 +30,18 @@ def move(board, index, value)
   return board
 end
 
+# evaluating the position selected and checking to see whether pos occupied
+def position_taken?(board, index)
+  if board[index] == nil or board[index] == "" or board[index] == " "
+    return false
+  elsif board[index] == "X" or board[index] == "O"
+    return true
+  end
+end
+
+
+
+
 def turn_count(board)
   cnt = 9
   board.each do |pos|
@@ -60,13 +72,7 @@ def valid_move?(board, index)
   end
 end
 
-def position_taken?(board, index)
-  if board[index] == nil or board[index] == "" or board[index] == " "
-    return false
-  elsif board[index] == "X" or board[index] == "O"
-    return true
-  end
-end
+
 
 # its my turn
 def turn(board)
