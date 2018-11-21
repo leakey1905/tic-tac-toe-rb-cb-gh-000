@@ -107,10 +107,8 @@ end
 
 # check whether it can be drawn
 def draw?(board)
-  if full?(board) and (not won?(board))
-    return true
-  elsif (not won?(board)) and (not full?(board))
-    return false
+  if not won?(board)
+    return full?(board)
   else
     return false
   end
