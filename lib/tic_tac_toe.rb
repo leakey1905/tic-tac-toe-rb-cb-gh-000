@@ -137,3 +137,8 @@ def winner(board)
     end
   end
 end
+
+# play method
+def play(board)
+
+end
