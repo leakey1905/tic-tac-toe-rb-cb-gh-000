@@ -19,7 +19,7 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-
+# take user_input and convert it to an Integer and subtracts 1
 def input_to_index(input)
   return input.to_i - 1
 end
