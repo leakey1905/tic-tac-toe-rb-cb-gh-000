@@ -19,9 +19,15 @@ def display_board(board)
   puts " #{board[6]} | #{board[7]} | #{board[8]} "
 end
 
-# take user_input and convert it to an Integer and subtracts 1
+# take user_input and convert it to an Integer and subtracts 1, 1 argument string
 def input_to_index(input)
   return input.to_i - 1
+end
+
+# move the t
+def move(board, index, value)
+  board[index] = value
+  return board
 end
 
 def turn_count(board)
@@ -43,11 +49,6 @@ def current_player(board)
   end
 end
 
-# move the things
-def move(board, index, value)
-  board[index] = value
-  return board
-end
 
 
 
