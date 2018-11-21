@@ -39,6 +39,16 @@ def position_taken?(board, index)
   end
 end
 
+# check the submitted position is present on the game board and not already filled
+def valid_move?(board, index)
+  if index.between?(0, 8) and not position_taken?(board, index)
+    return true
+  else
+    return false
+  end
+end
+
+
 
 
 
@@ -64,13 +74,6 @@ end
 
 
 
-def valid_move?(board, index)
-  if index.between?(0, 8) && position_taken?(board, index) == false
-    return true
-  else
-    return false
-  end
-end
 
 
 
