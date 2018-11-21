@@ -21,8 +21,7 @@ end
 
 
 def input_to_index(input)
-  index = input.to_i - 1
-  return index
+  return input.to_i - 1
 end
 
 def turn_count(board)
