@@ -24,7 +24,7 @@ def input_to_index(input)
   return input.to_i - 1
 end
 
-# move the t
+# 3 arguments board, index, value
 def move(board, index, value)
   board[index] = value
   return board
