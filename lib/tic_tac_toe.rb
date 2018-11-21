@@ -100,9 +100,9 @@ rescue NoMethodError
   return false
 end
 
-# check whether every element in the board contains X or all
+# check whether every element in the board contains X or O
 def full?(board)
-  return board.none?{|pos| pos == " " or pos == "" or pos == nil}
+  return board.all?{|pos| pos == "X" or pos == "O"}
 end
 
 # check whether it can be drawn
