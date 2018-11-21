@@ -83,7 +83,6 @@ def turn(board)
   else
     turn(board)
   end
-
 end
 
 # return false if there is no win combination present or the winning combination
