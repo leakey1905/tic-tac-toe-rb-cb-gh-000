@@ -144,5 +144,6 @@ def play(board)
     turn(board)
   end
   if won?(board)
+  elsif draw?(board)
   end
 end
