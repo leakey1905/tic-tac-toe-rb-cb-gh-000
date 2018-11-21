@@ -79,10 +79,11 @@ def turn(board)
   if valid_move?(board, index)
     value = current_player(board)
     move(board, index, value)
+    display_board(board)
   else
     turn(board)
   end
-  display_board(board)
+  
 end
 
 # return false if there is no win combination present or the winning combination
