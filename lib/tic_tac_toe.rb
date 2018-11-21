@@ -85,6 +85,7 @@ def turn(board)
   display_board(board)
 end
 
+# return false if there is no win combination present or the winning combination
 def won?(board)
   i = 0
   while i < 9
