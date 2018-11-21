@@ -36,6 +36,8 @@ def position_taken?(board, index)
     return false
   elsif board[index] == "X" or board[index] == "O"
     return true
+  else
+    return false
   end
 end
 
@@ -81,15 +83,6 @@ def turn(board)
     turn(board)
   end
   display_board(board)
-end
-
-
-
-
-
-# Helper Method
-def position_taken?(board, index)
-  !(board[index].nil? || board[index] == " ")
 end
 
 def won?(board)
